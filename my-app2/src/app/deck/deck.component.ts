@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./deck.component.css']
 })
 export class DeckComponent implements OnInit {
-  deck: any = [{sign: 'Tarus'},{sign: 'Aquarius'}];
+  deck: any = [{sign: 'Taurus'},{sign: 'Aquarius'}];
 
   constructor() { }
 

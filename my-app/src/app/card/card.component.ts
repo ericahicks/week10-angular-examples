@@ -19,7 +19,8 @@ export class CardComponent implements AfterViewInit {
     
     switch(this.card.sign) {
       case 'Aquarius': this.renderer.setStyle(this.el.nativeElement, 'background-color', 'aqua'); break;
-
+      case 'Taurus': this.renderer.setStyle(this.el.nativeElement, 'background-color', 'pink'); break;
+      default: this.renderer.setStyle(this.el.nativeElement, 'background-color', 'light-grey');
     }
   }
 

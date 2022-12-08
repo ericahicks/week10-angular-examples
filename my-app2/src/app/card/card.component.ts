@@ -13,9 +13,9 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     switch(this.card.sign) {
-      // case 'Tarus': this.card.color = 'pink'; break;
+      case 'Taurus': this.card.color = 'pink'; break;
       case 'Aquarius': this.card.color = 'aqua'; break;
-      // default: this.card.color = 'white';
+      default: this.card.color = 'light-grey';
     }
   }
 
