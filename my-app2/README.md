@@ -13,7 +13,7 @@ The project has two componenents: Deck and Card.
 The project has one model: Card
 which has two properties: sign, color
 
-card.ts
+**card.ts**
 ```
 export class Card {
     sign: string;
@@ -27,7 +27,7 @@ export class Card {
 
 The Deck component has one property: deck which contains an array of Card objects. The Card objects are displayed using an *ngFor.
 
-deck.component.ts
+**deck.component.ts**
 ```
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -42,7 +42,7 @@ export class DeckComponent implements OnInit {
 }
 ```
 
-deck.component.html
+**deck.component.html**
 ```
 <ng-container *ngFor="let card of deck; let i = index;">
     <app-card [card]="card"></app-card>
@@ -51,7 +51,7 @@ deck.component.html
 
 The Card component has one property: card which is handed in from the parent component. The card property is displayed in a list in a div. 
 
-card.component.ts
+**card.component.ts**
 ```
 import { Component, OnInit, Input } from '@angular/core';
 import { Card } from '../models/card';
@@ -67,7 +67,7 @@ export class CardComponent implements OnInit {
 }
 ```
 
-card.component.html
+**card.component.html**
 ```
 <div>
     <h1>Card Info</h1>
@@ -81,6 +81,7 @@ card.component.html
 
 The ngOnInit() method sets the card.color property depending on the card.sign property. 
 
+In **card.component.ts**
 ```
   ngOnInit(): void {
     switch(this.card.sign) {
@@ -93,6 +94,7 @@ The ngOnInit() method sets the card.color property depending on the card.sign pr
 
 The Card html's div uses [ngStyle] to set the background color of the div to the card.color property.
 
+In **card.component.html**
 ```
 <div [ngStyle]="{'background-color': card.color}">
    ...
